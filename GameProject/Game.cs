@@ -22,7 +22,7 @@ namespace GameProject
 
             do
             {
-                Console.WriteLine("Guess the secret number:");
+                Console.WriteLine("---Guess the secret number--- \n \n Write a number:");
                 NumGuessed = int.Parse(Console.ReadLine());
 
                 //validation to see if the number is bigger
@@ -38,7 +38,8 @@ namespace GameProject
                 NumTries++;
 
             } while (NumGuessed != randomNumber);
-            
+
+            Console.WriteLine("---End of the game--- \n \n The secret number was: " + randomNumber + "\n Number of attempts: " + NumTries);
         }
 
     }
