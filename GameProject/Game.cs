@@ -30,6 +30,10 @@ namespace GameProject
                 {
                     Console.WriteLine("Too large");
                 }
+                if (NumGuessed < randomNumber)
+                {
+                    Console.WriteLine("To small");
+                }
 
                 NumTries++;
 
