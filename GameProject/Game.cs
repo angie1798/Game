@@ -49,7 +49,7 @@ namespace GameProject
                 }
                 if (NumGuessed < randomNumber)
                 {
-                    Console.WriteLine("T0o small");
+                    Console.WriteLine("Too small");
                 }
 
             } while (NumGuessed != randomNumber);
