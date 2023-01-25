@@ -16,14 +16,31 @@ namespace GameProject
         static void RunGame()
         {
             Random rnd = new Random();
-            int randomNumber = rnd.Next(0, 100);
+            int randomNumber = rnd.Next(0, 10);
             int NumTries = 0;
-            int NumGuessed = 0;
+            int? NumGuessed= null;
+            int newNumber=0;
 
             do
             {
                 Console.WriteLine("---Guess the secret number--- \n \n Write a number:");
-                NumGuessed = int.Parse(Console.ReadLine());
+                newNumber = int.Parse(Console.ReadLine());
+
+                //assigns the first value if numguessed is null
+                if (NumGuessed == null)
+                {
+                    NumGuessed = newNumber;
+                    NumTries++;
+                }
+                else
+                {
+                    //if it is not null then asks if is the same number or not
+                    if(NumGuessed != newNumber)
+                    {
+                        NumTries++;
+                        NumGuessed = newNumber;
+                    }
+                }
 
                 //validation to see if the number is bigger
                 if (NumGuessed > randomNumber)
@@ -34,8 +51,6 @@ namespace GameProject
                 {
                     Console.WriteLine("To small");
                 }
-
-                NumTries++;
 
             } while (NumGuessed != randomNumber);
 
