@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace GameProject
 {
-    class Program
+    class Game
     {
         static void Main(string[] args)
         {
+            RunGame();
         }
+        static void RunGame()
+        {
+
+        }
+
     }
 }
