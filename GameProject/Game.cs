@@ -16,7 +16,7 @@ namespace GameProject
         static void RunGame()
         {
             Random rnd = new Random();
-            int randomNumber = rnd.Next(0, 10);
+            int randomNumber = rnd.Next(0, 10000);
             int NumTries = 0;
             int? NumGuessed= null;
             int newNumber=0;
